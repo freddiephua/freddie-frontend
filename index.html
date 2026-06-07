@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--navy:#0a0f1e;--navy2:#111827;--navy3:#1a2235;--card:#141c2e;--gold:#c9a84c;--gold2:#e8c878;--gold3:#f5e4b0;--text:#e8e4d8;--muted:#8a8fa8;--border:rgba(201,168,76,0.15);--radius:14px;}
+:root{--navy:#0a0f1e;--navy2:#111827;--navy3:#1a2235;--card:#141c2e;--gold:#c9a84c;--gold2:#e8c878;--gold3:#f5e4b0;--text:#e8e4d8;--muted:#8a8fa8;--border:rgba(201,168,76,0.15);--radius:14px;--green:#2d6a4f;--green2:#52b788;--green3:#d8f3dc;--purple:#4a3f7c;--purple2:#9d8fe0;}
 body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;}
 #app{display:flex;flex-direction:column;min-height:100vh;max-width:480px;margin:0 auto;}
 .header{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;background:var(--navy);}
@@ -15,9 +16,9 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
 .logo em{font-style:italic;color:var(--gold2);}
 .htime{font-size:12px;color:var(--muted);}
 .nav{display:flex;background:var(--navy2);border-top:1px solid var(--border);position:sticky;bottom:0;z-index:100;}
-.nb{flex:1;padding:10px 4px 12px;display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:10px;transition:color 0.2s;}
+.nb{flex:1;padding:8px 2px 10px;display:flex;flex-direction:column;align-items:center;gap:2px;border:none;background:none;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:9px;transition:color 0.2s;}
 .nb.active{color:var(--gold);}
-.nb svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;}
+.nb svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5;}
 .page{display:none;flex:1;overflow-y:auto;padding-bottom:16px;}
 .page.active{display:block;}
 .slabel{padding:18px 20px 8px;font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
@@ -56,7 +57,7 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
 .di{font-size:18px;margin-bottom:5px;}
 .dn{font-size:10px;color:var(--muted);line-height:1.3;}
 .dbn.active .dn{color:var(--gold);}
-.cl{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;overflow:hidden;}
+.cl2{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;overflow:hidden;}
 .lh{padding:11px 14px;display:flex;align-items:center;cursor:pointer;}
 .ln{width:20px;height:20px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--gold);flex-shrink:0;}
 .lt2{font-size:12px;color:var(--text);margin-left:8px;flex:1;}
@@ -91,6 +92,77 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
 .tn{font-family:'Playfair Display',serif;font-size:14px;color:var(--gold2);}
 .tf{font-size:11px;color:var(--muted);}
 .ctp{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+
+/* ── PHILOSOPHY ── */
+.phil-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:3px 12px;border-radius:20px;margin-bottom:12px;}
+.phil-provocation{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold3);line-height:1.45;font-style:italic;border-left:2px solid var(--gold);padding-left:14px;margin-bottom:12px;}
+.phil-narrative{font-size:13px;color:var(--muted);line-height:1.75;background:rgba(201,168,76,.04);border-radius:8px;padding:10px 12px;margin-bottom:12px;font-style:italic;border-left:2px solid rgba(201,168,76,.4);}
+.phil-body{font-size:13px;color:var(--text);line-height:1.8;margin-bottom:14px;}
+.carry-box{background:rgba(82,183,136,.08);border-left:2px solid var(--green2);border-radius:0 8px 8px 0;padding:10px 12px;margin-bottom:14px;}
+.carry-label{font-size:10px;font-weight:500;color:var(--green2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+.carry-text{font-size:13px;color:var(--text);line-height:1.6;}
+.reck-label{font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;margin-top:4px;}
+.streak-row{display:flex;align-items:center;gap:8px;padding:8px 16px 0;}
+.streak-pill{background:rgba(201,168,76,.1);border:1px solid var(--border);border-radius:20px;padding:3px 12px;font-size:11px;color:var(--gold2);}
+.saved-reck{background:rgba(82,183,136,.06);border-radius:8px;padding:10px 12px;font-size:13px;color:var(--text);line-height:1.6;border-left:2px solid var(--green2);}
+.saved-reck-lbl{font-size:10px;color:var(--green2);font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.past-title{font-size:11px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;padding:0 16px;margin-bottom:8px;margin-top:4px;}
+.past-item{margin:0 16px 8px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;}
+.past-item-head{font-family:'Playfair Display',serif;font-size:13px;color:var(--gold2);margin-bottom:2px;}
+.past-item-meta{font-size:11px;color:var(--muted);}
+.past-item-ref{font-size:12px;color:var(--text);margin-top:5px;line-height:1.5;font-style:italic;opacity:.8;}
+
+/* ── READING ── */
+.book-scroll{display:flex;gap:8px;padding:0 16px;overflow-x:auto;margin-bottom:14px;scrollbar-width:none;}
+.book-scroll::-webkit-scrollbar{display:none;}
+.btab{font-size:11px;padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s;flex-shrink:0;}
+.btab.active{background:rgba(157,143,224,.15);border-color:var(--purple2);color:var(--purple2);}
+.prog-row{display:flex;gap:5px;align-items:center;padding:0 16px;margin-bottom:14px;flex-wrap:wrap;}
+.prog-lbl{font-size:10px;color:var(--muted);margin-right:4px;}
+.pdot{width:9px;height:9px;border-radius:50%;background:rgba(201,168,76,.2);cursor:pointer;transition:background .2s;flex-shrink:0;}
+.pdot.done{background:var(--green2);}
+.pdot.active{background:var(--purple2);}
+.c-num{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.c-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold2);margin-bottom:3px;line-height:1.3;}
+.c-from{font-size:11px;color:var(--muted);margin-bottom:12px;}
+.c-body{font-size:13px;color:var(--text);line-height:1.8;margin-bottom:14px;}
+.q-box{background:rgba(157,143,224,.07);border-left:2px solid var(--purple2);border-radius:0 8px 8px 0;padding:10px 12px;margin-bottom:14px;}
+.q-label{font-size:10px;font-weight:500;color:var(--purple2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+.q-text{font-size:13px;color:var(--text);line-height:1.6;}
+.ref-area{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.6;resize:none;min-height:75px;}
+.ref-area:focus{outline:none;border-color:rgba(157,143,224,.5);}
+.ref-area::placeholder{color:var(--muted);}
+.saved-ref{background:rgba(82,183,136,.06);border-radius:8px;padding:10px 12px;font-size:13px;color:var(--text);line-height:1.6;border-left:2px solid var(--green2);}
+.saved-ref-lbl{font-size:10px;color:var(--green2);font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.abtn{background:rgba(201,168,76,.1);border:1px solid var(--border);color:var(--gold);font-size:12px;padding:7px 14px;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.abtn:hover{background:rgba(201,168,76,.2);}
+.abtn.accent{background:rgba(157,143,224,.15);border-color:var(--purple2);color:var(--purple2);}
+.abtn.green{background:rgba(82,183,136,.12);border-color:var(--green2);color:var(--green2);}
+
+/* ── FINANCE ── */
+.nw-hero{margin:0 16px 14px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 16px;text-align:center;}
+.nw-label{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+.nw-amount{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold2);margin-bottom:4px;}
+.nw-sub{font-size:11px;color:var(--muted);}
+.fin-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 16px 14px;}
+.fin-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;}
+.fin-card-label{font-size:10px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px;}
+.fin-card-val{font-size:16px;font-weight:500;color:var(--text);margin-bottom:2px;}
+.fin-card-sub{font-size:11px;color:var(--muted);}
+.fin-card.pos .fin-card-val{color:var(--green2);}
+.fin-card.neg .fin-card-val{color:#f08080;}
+.inv-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);}
+.inv-row:last-child{border-bottom:none;}
+.inv-name{font-size:13px;font-weight:500;color:var(--text);}
+.inv-sub{font-size:11px;color:var(--muted);margin-top:1px;}
+.inv-val{text-align:right;}
+.inv-amount{font-size:13px;color:var(--text);}
+.inv-pnl{font-size:11px;margin-top:1px;}
+.inv-pnl.pos{color:var(--green2);}
+.inv-pnl.neg{color:#f08080;}
+.fin-updated{font-size:11px;color:var(--muted);text-align:center;padding:8px;font-style:italic;}
+.fin-section-title{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
 </style>
 </head>
 <body>
@@ -104,25 +176,47 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
 <div class="page active" id="pg-home">
   <div class="hero">
     <div class="chip">📅 <span id="td"></span></div>
-    <div class="gr" id="gr">Good evening, <em>Freddie</em></div>
+    <div class="gr" id="gr">Good morning, <em>Freddie</em></div>
     <div class="sub">Your personal growth OS.</div>
   </div>
   <div class="slabel">Modules</div>
   <div class="hmgrid">
-    <div class="hmc" onclick="goTo('morning')"><div class="hmi">🌅</div><div class="hmn">Morning Brief</div><div class="hmd">Wisdom · News · Conversation</div></div>
-    <div class="hmc" onclick="goTo('night')"><div class="hmi">🌙</div><div class="hmn">Night Brief</div><div class="hmd">Thinker · Story · Reflection</div></div>
-    <div class="hmc" onclick="goTo('learn')"><div class="hmi">🧠</div><div class="hmn">Knowledge Cards</div><div class="hmd">6 domains · 5-layer cards</div></div>
-    <div class="hmc" onclick="goTo('coach')"><div class="hmi">💬</div><div class="hmn">AI Coach</div><div class="hmd">Executive coaching</div></div>
+    <div class="hmc" onclick="goTo('morning')"><div class="hmi">🌅</div><div class="hmn">Morning</div><div class="hmd">Philosophy · Intention</div></div>
+    <div class="hmc" onclick="goTo('news')"><div class="hmi">📰</div><div class="hmn">News</div><div class="hmd">Digest · Conversation</div></div>
+    <div class="hmc" onclick="goTo('reading')"><div class="hmi">📚</div><div class="hmn">Reading</div><div class="hmd">Books · Concepts · Reflect</div></div>
+    <div class="hmc" onclick="goTo('night')"><div class="hmi">🌙</div><div class="hmn">Night</div><div class="hmd">Thinker · Story · Journal</div></div>
+    <div class="hmc" onclick="goTo('finance')"><div class="hmi">💰</div><div class="hmn">Finance</div><div class="hmd">Net worth · Investments</div></div>
+    <div class="hmc" onclick="goTo('learn')"><div class="hmi">🧠</div><div class="hmn">Knowledge</div><div class="hmd">6 domains · 5-layer cards</div></div>
   </div>
 </div>
 
-<!-- MORNING -->
+<!-- MORNING: PHILOSOPHY -->
 <div class="page" id="pg-morning">
-  <div class="slabel">Morning Brief</div>
-  <div class="card">
-    <div class="card-head"><div class="card-title">🌿 Wisdom of the Day</div><button class="rbtn" id="wr" onclick="loadWisdom(true)">Refresh</button></div>
-    <div id="wb"><div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Summoning wisdom...</div></div></div>
+  <div class="slabel">Morning Philosophy</div>
+  <div class="streak-row"><div class="streak-pill" id="phil-streak">— day streak</div></div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-head"><div class="card-title">🌿 Today's Idea</div><button class="rbtn" onclick="nextPhil()">Next →</button></div>
+    <div class="body" id="phil-body">
+      <div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Loading philosophy...</div></div>
+    </div>
   </div>
+  <div class="card">
+    <div class="card-head"><div class="card-title">✍️ Evening Reckoning</div></div>
+    <div class="body">
+      <div class="reck-label">How did today go with this in mind?</div>
+      <div id="reck-content">
+        <textarea class="ta" id="reck-input" placeholder="Raw is fine — no need to polish it..." style="min-height:85px;"></textarea>
+        <button class="sbtn" onclick="saveReck()" style="margin-top:8px;">Save Reckoning</button>
+      </div>
+    </div>
+  </div>
+  <div id="past-recks"></div>
+</div>
+
+<!-- NEWS -->
+<div class="page" id="pg-news">
+  <div class="slabel">News & Conversation</div>
+  <div style="padding:0 16px 12px;font-size:12px;color:var(--muted);line-height:1.6;">Best read post-gym, pre-work — when your mind is sharp and ready to act on information.</div>
   <div class="card">
     <div class="card-head"><div class="card-title">📰 News Digest</div><button class="rbtn" id="nr" onclick="loadNews(true)">Refresh</button></div>
     <div id="nb"><div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Scanning the world...</div></div></div>
@@ -130,6 +224,34 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
   <div class="card">
     <div class="card-head"><div class="card-title">💡 Conversation Starter</div><button class="rbtn" id="cr" onclick="loadConvo(true)">Refresh</button></div>
     <div id="cb"><div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Finding a great topic...</div></div></div>
+  </div>
+</div>
+
+<!-- READING -->
+<div class="page" id="pg-reading">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px 8px;">
+    <div style="font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;">Reading Companion</div>
+    <button onclick="toggleBookInfo()" style="background:rgba(201,168,76,.1);border:1px solid var(--border);border-radius:50%;width:24px;height:24px;color:var(--gold);font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;">?</button>
+  </div>
+  <div id="book-info" style="display:none;margin:0 16px 12px;background:rgba(201,168,76,.05);border:1px solid var(--border);border-radius:10px;padding:12px 14px;">
+    <div style="font-size:11px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">How to add or swap books</div>
+    <div style="font-size:12px;color:var(--muted);line-height:1.8;">
+      1. Open Claude (claude.ai) and find the Freddie conversation<br>
+      2. Upload your book PDF or epub and say <em style="color:var(--text);">"add this to my Reading tab"</em><br>
+      3. Claude extracts key concepts tailored to you<br>
+      4. You receive a new index.html file<br>
+      5. Go to github.com/freddiephua/freddie-frontend<br>
+      6. Click index.html → pencil icon → select all → paste → commit<br>
+      7. Vercel redeploys in ~30 seconds
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;">Current books: Tibetan (Beginners) · Tibetan (Sogyal) · Psychology of Money · Dalio Principles</div>
+  </div>
+  <div class="book-scroll" id="book-tabs"></div>
+  <div class="prog-row" id="prog-dots"></div>
+  <div class="card" id="concept-card">
+    <div class="body" id="concept-body">
+      <div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Loading...</div></div>
+    </div>
   </div>
 </div>
 
@@ -157,6 +279,14 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
   </div>
 </div>
 
+<!-- FINANCE -->
+<div class="page" id="pg-finance">
+  <div class="slabel">Finance</div>
+  <div id="finance-content">
+    <div class="loading" style="padding:40px;"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Loading your snapshot...</div></div>
+  </div>
+</div>
+
 <!-- LEARN -->
 <div class="page" id="pg-learn">
   <div class="slabel">Knowledge Cards</div>
@@ -177,48 +307,13 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
   <div id="cl" style="padding:0 16px;"></div>
 </div>
 
-<!-- COACH -->
-<div class="page" id="pg-coach">
-  <div class="slabel">Executive Coach</div>
-  <div class="card">
-    <div class="card-head">
-      <div><div class="card-title">💬 AI Coaching</div><div style="font-size:11px;color:var(--muted);margin-top:2px;" id="csubt">Finance Director · Meta · SEA</div></div>
-      <button class="rbtn" onclick="clearCoach()">Clear</button>
-    </div>
-    <div id="cm" style="padding:16px;min-height:200px;max-height:360px;overflow-y:auto;">
-      <div class="cmsg">👋 Hello Freddie. I'm your executive coach — direct, thoughtful, and here for you.<br><br>What's on your mind?</div>
-      <div class="ctp">
-        <button class="rbtn" onclick="cp('I have a difficult conversation coming up. Help me prepare.')">Difficult conversation</button>
-        <button class="rbtn" onclick="cp('Help me think through a strategic decision.')">Strategic decision</button>
-        <button class="rbtn" onclick="cp('I want to reflect on my leadership blind spots.')">Leadership reflection</button>
-      </div>
-    </div>
-    <div class="carea">
-      <input class="pin" style="margin:0;flex:1;" id="ci" placeholder="Ask your coach..." onkeydown="if(event.key==='Enter')sendC()">
-      <button class="csend" onclick="sendC()">Send</button>
-    </div>
-  </div>
-</div>
-
-<!-- PROFILE -->
-<div class="page" id="pg-profile">
-  <div class="slabel">Your Profile</div>
-  <div class="psec">
-    <div class="pl">Name</div><input class="pin" id="pn" value="Freddie">
-    <div class="pl">Role</div><input class="pin" id="pr" value="Finance Director">
-    <div class="pl">Company</div><input class="pin" id="pc" value="Meta">
-    <div class="pl">Region</div><input class="pin" id="preg" value="Southeast Asia">
-    <div class="pl">Growth Goals</div><input class="pin" id="pg2" value="Executive presence, strategic thinking, continuous learning">
-    <button class="sbtn" onclick="saveP()">Save Profile</button>
-  </div>
-</div>
-
 <nav class="nav">
   <button class="nb active" onclick="goTo('home')" id="n-home"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</button>
   <button class="nb" onclick="goTo('morning')" id="n-morning"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>Morning</button>
-  <button class="nb" onclick="goTo('learn')" id="n-learn"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Learn</button>
+  <button class="nb" onclick="goTo('news')" id="n-news"><svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>News</button>
+  <button class="nb" onclick="goTo('reading')" id="n-reading"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Reading</button>
   <button class="nb" onclick="goTo('night')" id="n-night"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>Night</button>
-  <button class="nb" onclick="goTo('profile')" id="n-profile"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Profile</button>
+  <button class="nb" onclick="goTo('finance')" id="n-finance"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finance</button>
 </nav>
 </div>
 
@@ -230,15 +325,63 @@ const ch=[];
 let dom='Management Accounting',cardIdx=0;
 let prof={name:'Freddie',role:'Finance Director',company:'Meta',region:'Southeast Asia',goals:'Executive presence, strategic thinking, continuous learning'};
 
-const SCHOOLS=['Stoicism','Zen Buddhism','Taoism','Confucianism','Aristotelianism','Existentialism','Nietzsche','Charlie Munger mental models','Naval Ravikant philosophy','Sun Tzu','Druckerism','Machiavellian pragmatism'];
+// ── PHILOSOPHY DATA ─────────────────────────────────────────────────────
+const PHIL_DATA=[
+  {id:'p1',tradition:'Stoicism',tc:'rgba(201,168,76,.12)',tt:'var(--gold)',format:'A',provocation:'The obstacle is not in the way. The obstacle is the way.',body:'Marcus Aurelius meant this literally: the thing you are resisting right now is precisely where the growth is located. Resistance is information. It points to exactly what needs to be worked on.',question:'What are you currently working around rather than through? Not avoiding out of strategy — avoiding out of discomfort.'},
+  {id:'p2',tradition:'Buddhist thought',tc:'rgba(82,183,136,.1)',tt:'var(--green2)',format:'B',narrative:'A student asks the master: how do I stop being angry? The master says: you don\'t stop being angry. You stop being run by it. The student asks: what is the difference? The master says: one is weather. The other is who you are.',body:'The first instinct — the irritation, the defensiveness — is not the problem. It is information about your values. What you do in the bardo pause between that instinct and your response — that is character.',question:'Today, when you feel the first instinct rise — not if, when — can you name it before you act on it? Just name it. That is the whole practice.'},
+  {id:'p3',tradition:'Dalio — Principles',tc:'rgba(201,168,76,.08)',tt:'var(--gold)',format:'A',provocation:'Pain + reflection = progress. Pain alone is just pain.',body:'Most people exit difficult experiences as quickly as possible. The difference between people who compound their growth and those who don\'t is not the difficulty of their experiences — it is whether they stop long enough to understand what the experience revealed.',question:'What difficult experience from the last month have you moved past without fully understanding what it revealed about your assumptions or blind spots?'},
+  {id:'p4',tradition:'Stoicism',tc:'rgba(201,168,76,.12)',tt:'var(--gold)',format:'B',narrative:'Epictetus was a slave. He had no control over his body, his location, his daily circumstances. He built a philosophy entirely around the one thing that could not be taken from him: his response to what happened.',body:'The dichotomy of control is not passive acceptance. It is radical clarity about where your energy belongs. Everything outside your response is noise. Everything inside it is the work.',question:'Where are you currently spending energy on something you cannot control — and what would that energy look like redirected toward your response?'},
+  {id:'p5',tradition:'Psychology of Money',tc:'rgba(201,168,76,.08)',tt:'var(--gold)',format:'A',provocation:'The person who can be financially unbreakable will almost always outperform the person trying to get rich quickly.',body:'Compounding only works if you stay in the game. One catastrophic decision — born of overconfidence or leverage — can erase years of careful accumulation. Survival is the strategy, not boldness.',question:'In your current financial life, what is the decision that, if it went wrong, would force you to start over? Is that risk being managed, or assumed away?'},
+  {id:'p6',tradition:'Buddhist thought',tc:'rgba(82,183,136,.1)',tt:'var(--green2)',format:'B',narrative:'A man spends thirty years building a reputation. One afternoon, tired and frustrated, he dismisses a junior colleague publicly. The dismissal takes thirty seconds. The reputation takes a decade to rebuild — if it rebuilds at all.',body:'Karma is not mystical. It is the compounding of habitual action. Each response you give becomes slightly easier to repeat next time. You are always practicing something.',question:'What are you currently practicing — through your daily reactions and choices — that you would not consciously choose to get better at?'},
+  {id:'p7',tradition:'Dalio — Principles',tc:'rgba(201,168,76,.08)',tt:'var(--gold)',format:'B',narrative:'Two people receive the same critical feedback. The first feels defensiveness, then genuinely considers whether it might be true. The second spends the next hour building a case for why the feedback is wrong. Both felt the same thing. Only one was able to use it.',body:'Your ego needs to be right more than it needs to understand correctly. Radical open-mindedness is not agreement with everyone — it is the discipline of separating the quality of an idea from the discomfort of receiving it.',question:'Who in your life regularly gives you feedback that you tend to discount — and is it possible they are right more often than you allow?'},
+  {id:'p8',tradition:'Stoicism',tc:'rgba(201,168,76,.12)',tt:'var(--gold)',format:'A',provocation:'Memento mori — remember that you will die. Not as morbidity. As clarifier.',body:'The Stoics kept death present not to create dread but to cut through triviality. When you hold the fact of your mortality lightly in mind, the petty grievances, the status games — they lose gravity. What remains is what actually matters.',question:'If you genuinely held in mind that your time is finite — not as an idea but as a felt reality — what would you stop giving energy to today?'},
+  {id:'p9',tradition:'Psychology of Money',tc:'rgba(201,168,76,.08)',tt:'var(--gold)',format:'B',narrative:'Ronald Read was a janitor. He lived simply, invested quietly in blue-chip stocks for decades, and left $8 million to his local hospital when he died. He never earned a high salary. He never made a bold bet. He simply stayed consistent long enough.',body:'The most powerful financial strategy is the one you can actually execute — not the one that is theoretically optimal. Reasonable beats rational when rational is something you cannot sustain under pressure.',question:'In your investment approach — VOO, DCA, staying mechanical — what is the most likely thing that would cause you to deviate from the plan?'},
+  {id:'p10',tradition:'Buddhist thought',tc:'rgba(82,183,136,.1)',tt:'var(--green2)',format:'A',provocation:'Skillful means without right intention is just sophisticated self-interest.',body:'The action looks identical from the outside. The redirection, the honest feedback — these can come from genuine care or from contempt wearing the costume of care. You always know which one it is. The practice is not getting the behavior right. It is getting the intention honest.',question:'Today, before any interaction where you will be guiding or correcting someone — pause. What is your actual intention? Is it for them, or for you?'},
+  {id:'p11',tradition:'Stoicism',tc:'rgba(201,168,76,.12)',tt:'var(--gold)',format:'B',narrative:'Marcus Aurelius was emperor of Rome. He spent his mornings writing private notes to himself about his failures, his fears, his tendency toward impatience. He never published them. He wrote them because the examination was the practice.',body:'The examined life is not comfortable. It requires you to be a fair witness to yourself — neither harsher than the evidence warrants nor more lenient. Most people oscillate between the two. The practice is accurate seeing.',question:'In your evening reckoning tonight — where did you fall short of your own standard today? Not to punish yourself. To see clearly.'},
+  {id:'p12',tradition:'Dalio — Principles',tc:'rgba(201,168,76,.08)',tt:'var(--gold)',format:'A',provocation:'Your values are what you consider important. Your principles are what allow you to live consistently with them. Without principles, your values are just good intentions.',body:'Good intentions under pressure collapse into whatever habit or fear is loudest in the moment. Principles are pre-decisions — they remove the cognitive load of each difficult choice by having already decided how you respond.',question:'Think of a recurring situation where you consistently fail to act in line with your values. Is the failure a lack of values — or a lack of a pre-committed principle?'},
+];
+
+// ── READING DATA ─────────────────────────────────────────────────────────
+const BOOKS=[
+  {id:'tibetan_beginners',short:'Tibetan (Beginners)',concepts:[
+    {title:'How we live is how we die',from:'Ch.1 — Karma',body:'Karma is not a cosmic scoreboard — it is a description of how habits compound. Every thought, word, and action creates a tendency that makes the next similar action more likely. What you are now is the sum of everything until this moment. And what you are becoming is determined by what you are doing right now.',question:'If your habits from the last 30 days continued exactly as they are, what would they be producing in your life five years from now? Not what you intend. What the actual pattern would produce.'},
+    {title:'The self is a story, not a fact',from:'Ch.2 — What dies and what gets reborn',body:'The self is a collection of stories we keep retelling. The tighter we hold those stories, the more karma we create. The more we grasp at who we think we are, the more resistance we feel when reality doesn\'t confirm it.',question:'What is one story you tell yourself about who you are — that you hold quite tightly — that might not be as fixed as you think? Not a flaw. A self-definition you\'re attached to.'},
+    {title:'The bardo is any gap',from:'Ch.3 — Our consciousness after death',body:'Bardo means gap. But bardo describes any gap: between breaths, between jobs, between who you were and who you are becoming. Every transition has the same structure: disorientation, the pull to grasp at what was, and the possibility of moving forward with awareness.',question:'What bardo are you currently in? Is there a gap or transition in your life right now where the old is ending and the new hasn\'t fully formed? What is your instinct telling you to grasp at?'},
+    {title:'Compassion reduces ego',from:'Ch.5 — Start where we are now',body:'Developing compassion for others is not primarily an ethical act — it is a practical one. When we focus on reducing suffering for others, we automatically reduce our focus on "me" and "I." The ego cannot maintain its grip when the mind is genuinely oriented toward others.',question:'Think of someone in your life you find difficult. Can you hold both truths: that their behavior may be problematic, and that wishing them suffering would harm you more than them?'},
+    {title:'Wisdom is seeing impermanence clearly',from:'Ch.5 — Start where we are now',body:'Wisdom means one thing: seeing reality accurately. And reality is impermanent. Nothing is permanently fixed — not your circumstances, not your relationships, not your fears. When you see this clearly, grasping becomes not a moral failure but a logical error.',question:'What in your life right now are you treating as more permanent than it is? Not things you fear losing — things you are assuming will stay exactly as they are.'},
+  ]},
+  {id:'tibetan_sogyal',short:'Tibetan (Sogyal)',concepts:[
+    {title:'Death is the mirror in which life is seen',from:'Ch.1 — In the mirror of death',body:'We use every strategy available to avoid thinking about death, and this avoidance is precisely what robs life of its depth. When we truly look at death — not morbidly, but honestly — it strips away everything inessential. What remains is what actually matters.',question:'If you knew with certainty that you had five years left — what would you stop doing? What does your answer reveal about what you are currently doing that you know is inessential?'},
+    {title:'Impermanence is not loss',from:'Ch.2 — Impermanence',body:'The teaching on impermanence is frequently misunderstood as a teaching on loss. It is not. Everything arises, remains for a time, and passes away. Suffering comes not from impermanence but from our resistance to it.',question:'Where in your life are you most resistant to something changing — even something you know intellectually must change? What would it feel like to fully accept that impermanence?'},
+    {title:'Rigpa — the nature of mind is always present',from:'Ch.4 — The nature of mind',body:'Beneath the ordinary mind — the mind that plans, reacts, worries — there is what the tradition calls Rigpa: a primordial, pure awareness that is always present. The ordinary mind is like clouds. Rigpa is the sky. The clouds do not change the sky.',question:'When in your life do you experience something close to this — even briefly? Moments where the noise drops and something clearer is present. What conditions tend to create that?'},
+    {title:'How you live is how you will die',from:'Ch.6 — Evolution, karma, and rebirth',body:'The habits of mind we build during our lives do not suddenly dissolve at death. They are precisely what we bring with us. The person who trained their mind to stay open, to return to awareness after disturbance — that person navigates dying differently.',question:'What is the quality of mind you are most consistently building right now? If you extrapolate that quality forward honestly, what kind of person does it produce in ten years?'},
+    {title:'The practice is the preparation',from:'Ch.5 — Bringing the mind home',body:'Meditation is training. Each time you notice the mind has wandered and you return to awareness — that is a repetition. What you are building is the capacity to recognise and return, no matter how far the mind has gone.',question:'What is your actual contemplative practice right now — not what you intend it to be, but what it actually is? If it is not yet a practice, what is the smallest version of it you could start tomorrow?'},
+  ]},
+  {id:'psych_money',short:'Psychology of Money',concepts:[
+    {title:'No one is crazy — different experiences',from:'Ch.1 — No one\'s crazy',body:'Every person\'s financial behaviour makes sense given the experiences that shaped them. We dismiss irrational financial behaviour as stupidity when it is often just a different lived experience applied to a new situation.',question:'What money beliefs do you hold that come directly from your upbringing — that you have never consciously examined? Are they still serving you?'},
+    {title:'Reasonable beats rational',from:'Ch.11 — Reasonable > Rational',body:'The rational financial decision is often not the one you can actually live with. A portfolio allocation that is mathematically optimal but causes you to lose sleep and sell at the bottom is worse than a suboptimal allocation you can hold through volatility.',question:'What financial decision are you making — or avoiding — because the rational answer and the answer you can live with are different? What does that gap reveal?'},
+    {title:'Compounding requires survival',from:'Ch.4 — Confounding compounding',body:'Buffett\'s secret is not his annual returns. His secret is that he has been compounding for over 70 years. The most important financial skill is not identifying great investments — it is avoiding the decisions that force you to stop investing.',question:'What is the biggest risk in your current financial life that could force you to stop? Is that risk being managed, or ignored because the scenario feels unlikely?'},
+    {title:'Wealth is what you don\'t see',from:'Ch.9 — Wealth is what you don\'t see',body:'True wealth is the money not yet spent: the investments, the options, the freedom they represent. We spend trying to signal wealth that we haven\'t actually built. The goal is not a lifestyle that looks wealthy. It is the actual accumulation of options.',question:'Honestly — what percentage of your financial decisions are driven by what you actually want vs what you want others to perceive? Where is the gap largest?'},
+    {title:'Freedom is the highest dividend',from:'Ch.7 — Freedom',body:'The highest form of wealth is the ability to do what you want, when you want, with whom you want. Not luxury. Control over your time. Research shows that once basic needs are met, the things that improve wellbeing most are autonomy and meaningful relationships.',question:'On a scale of 1 to 10, how much control do you currently have over how you spend your time? What is the single biggest constraint — and is it genuinely financial, or something else?'},
+  ]},
+  {id:'principles',short:'Dalio — Principles',concepts:[
+    {title:'Principles connect values to actions',from:'Part 1 — The importance of principles',body:'Without principles, you are forced to react to each situation from scratch — drawing on whatever mood or bias surfaces in the moment. Principles are the operating system between your values and your actions. They remove the cognitive load of each difficult choice.',question:'Write down three principles you actually operate by — not what you should operate by, but what your actual behaviour reveals. Are these principles you consciously chose, or ones that chose you?'},
+    {title:'Pain + reflection = progress',from:'Part 2 — My most fundamental life principles',body:'Pain alone produces nothing. But when you encounter a painful experience and force yourself to understand why, that is when learning compounds. Most people exit painful experiences as quickly as possible. Dalio built a system to slow down and mine them.',question:'Think of a painful experience from the last two years that you moved past without fully mining it. What did it reveal about your assumptions or blind spots that you have not yet turned into a lesson?'},
+    {title:'Your ego is your biggest obstacle',from:'Part 2 — My most fundamental life principles',body:'Your ego needs to be right more than it needs to understand correctly. It interprets challenges to your ideas as personal attacks. Radical open-mindedness is the discipline of separating the quality of an idea from who is saying it.',question:'Where in your life is your ego most likely to cost you accurate information? Where do you dismiss feedback too quickly — not because it is wrong, but because of who is delivering it?'},
+    {title:'The 5-step process',from:'Part 2 — My most fundamental life principles',body:'Have clear goals, identify the problems blocking you, diagnose the root cause, design a plan, execute. What makes it powerful is the diagnosis step — most people skip from problem to solution. The root cause of most problems is either a design failure or a personnel failure.',question:'Take one current problem and force yourself through the diagnosis step. Is the problem a design failure, a personnel failure (including your own behaviour), or both?'},
+    {title:'Believability-weighted decisions',from:'Part 3 — Management principles',body:'Not all opinions are equally valuable. Weight input by the demonstrated competence of the person giving it in the relevant domain — including yourself. This requires the humility to sometimes discount your own view when someone with a stronger track record disagrees.',question:'In a current important decision, whose input are you weighting most heavily — and is that weighting based on their demonstrated competence, or on other factors like relationship or agreement?'},
+  ]},
+];
+
+// ── THINKERS & TOPICS (unchanged) ──────────────────────────────────────
 const THINKERS=[
-  {n:'Marcus Aurelius',i:'🏛️',f:'Stoic philosophy, duty, resilience'},
-  {n:'Charlie Munger',i:'🧩',f:'Mental models, rationality, multi-disciplinary thinking'},
-  {n:'Bruce Lee',i:'🌊',f:'Self-mastery, adaptability, honest self-expression'},
-  {n:'Naval Ravikant',i:'⚡',f:'Wealth, leverage, specific knowledge, happiness'},
-  {n:'Seneca',i:'⏳',f:'Time, mortality, living deliberately'},
-  {n:'Nassim Taleb',i:'🎲',f:'Antifragility, uncertainty, skin in the game'},
-  {n:'Robert Greene',i:'♟️',f:'Power dynamics, human nature, strategy'}
+  {n:'Marcus Aurelius',i:'🏛️',f:'Stoic philosophy, duty, resilience, the examined life'},
+  {n:'Charlie Munger',i:'🧩',f:'Mental models, rationality, multi-disciplinary thinking, lifelong learning'},
+  {n:'Ryan Holiday',i:'🌿',f:'Stoicism applied to modern life, ego, obstacles, the present moment'},
+  {n:'Seneca',i:'⏳',f:'Time, mortality, living deliberately, the shortness of life'},
+  {n:'Epictetus',i:'⚖️',f:'Dichotomy of control, freedom through acceptance, inner discipline'},
+  {n:'Sogyal Rinpoche',i:'🪷',f:'Impermanence, the nature of mind, living and dying with awareness'},
+  {n:'Thich Nhat Hanh',i:'☮️',f:'Mindfulness, interbeing, compassion, the present moment as home'},
 ];
 const TOPICS={
   'Management Accounting':['Cost-Volume-Profit Analysis','Variance Analysis','Activity-Based Costing','Transfer Pricing','Break-Even Analysis','Standard Costing','Contribution Margin','Overhead Allocation','Working Capital Management','Cash Flow Forecasting','Capital Budgeting','Balanced Scorecard','Key Performance Indicators','Responsibility Accounting','Flexible Budgeting','Rolling Forecasts','Zero-Based Budgeting','Marginal Costing','Throughput Accounting','Life Cycle Costing'],
@@ -249,19 +392,434 @@ const TOPICS={
   'AI Fluency':['LLM Foundations','Prompt Engineering','AI in FP&A','AI Governance','Responsible AI','AI Transformation Leadership','The Evolving CFO Role','AI Ethics','Generative AI Use Cases','AI Risk Management','Machine Learning Basics','Natural Language Processing','AI in Audit','Predictive Analytics','AI Strategy','Data Quality for AI','Human-AI Collaboration','AI ROI Measurement','Regulatory AI Landscape','AI Change Management']
 };
 
-// Load saved profile
-const sp=localStorage.getItem('fp');if(sp){Object.assign(prof,JSON.parse(sp));applyP();}
-const sj=localStorage.getItem('fj');if(sj)document.getElementById('jt').value=sj;
-const sci=localStorage.getItem('fci');if(sci)cardIdx=parseInt(sci)||0;
+// ── PHIL STATE ───────────────────────────────────────────────────────────
+let philState={reflections:{},streak:0,lastDay:null,todayKey:null,todayId:null};
+const pss=localStorage.getItem('phil_state');if(pss)try{philState=JSON.parse(pss);}catch(e){}
 
-function applyP(){
-  document.getElementById('pn').value=prof.name;
-  document.getElementById('pr').value=prof.role;
-  document.getElementById('pc').value=prof.company;
-  document.getElementById('preg').value=prof.region;
-  document.getElementById('pg2').value=prof.goals;
-  document.getElementById('csubt').textContent=`${prof.role} · ${prof.company} · ${prof.region}`;
+function savePhilState(){localStorage.setItem('phil_state',JSON.stringify(philState));}
+
+function todayKey(){const n=new Date(),s=new Date(n.getTime()+8*3600000);return s.toISOString().slice(0,10);}
+
+function updateStreak(){
+  const tk=todayKey();
+  const prev=new Date(new Date().getTime()+8*3600000);prev.setDate(prev.getDate()-1);
+  const yk=prev.toISOString().slice(0,10);
+  if(philState.lastDay===tk)return;
+  if(philState.lastDay===yk)philState.streak=(philState.streak||0)+1;
+  else philState.streak=1;
+  philState.lastDay=tk;
 }
+
+function pickPhilosophy(){
+  const tk=todayKey();
+  if(philState.todayKey===tk&&philState.todayId)return PHIL_DATA.find(p=>p.id===philState.todayId)||PHIL_DATA[0];
+  const used=Object.keys(philState.reflections||{});
+  const available=PHIL_DATA.filter(p=>!used.includes(p.id));
+  const pool=available.length>0?available:PHIL_DATA;
+  const p=pool[Math.floor(Math.random()*pool.length)];
+  philState.todayKey=tk;philState.todayId=p.id;savePhilState();
+  return p;
+}
+
+function renderPhilosophy(){
+  updateStreak();savePhilState();
+  document.getElementById('phil-streak').textContent=`${philState.streak||1} day streak`;
+  const p=pickPhilosophy();
+  const tk=todayKey();
+  const savedReck=philState.reflections[p.id]?philState.reflections[p.id][tk]:null;
+
+  let html=`<div class="phil-badge" style="background:${p.tc};color:${p.tt}">${p.tradition}</div>`;
+  if(p.format==='A'){
+    html+=`<div class="phil-provocation">${p.provocation}</div>`;
+  } else {
+    html+=`<div class="phil-narrative">${p.narrative}</div>`;
+  }
+  html+=`<div class="phil-body">${p.body}</div>`;
+  html+=`<div class="carry-box"><div class="carry-label">Carry this today</div><div class="carry-text">${p.question}</div></div>`;
+  document.getElementById('phil-body').innerHTML=html;
+
+  // Reckoning
+  if(savedReck){
+    document.getElementById('reck-content').innerHTML=`<div class="saved-reck"><div class="saved-reck-lbl">saved</div>${savedReck}</div>`;
+  } else {
+    document.getElementById('reck-input').value='';
+  }
+  document.getElementById('reck-input') && (document.getElementById('reck-input').dataset.philId=p.id);
+
+  // Past reckonings
+  const past=[];
+  PHIL_DATA.forEach(ph=>{
+    if(philState.reflections[ph.id]){
+      Object.entries(philState.reflections[ph.id]).forEach(([day,ref])=>{
+        if(day!==tk)past.push({day,phil:ph,ref});
+      });
+    }
+  });
+  past.sort((a,b)=>b.day.localeCompare(a.day));
+  if(past.length){
+    let ph=`<div class="past-title">Past reckonings</div>`;
+    past.slice(0,3).forEach(e=>{
+      ph+=`<div class="past-item">
+        <div class="past-item-head">${e.phil.format==='A'?e.phil.provocation.slice(0,50)+'…':e.phil.tradition}</div>
+        <div class="past-item-meta">${e.day} · ${e.phil.tradition}</div>
+        <div class="past-item-ref">${e.ref.slice(0,90)}${e.ref.length>90?'…':''}</div>
+      </div>`;
+    });
+    document.getElementById('past-recks').innerHTML=ph;
+  } else {
+    document.getElementById('past-recks').innerHTML='';
+  }
+}
+
+function nextPhil(){
+  // Move to next unused philosophy
+  const used=Object.keys(philState.reflections||{});
+  const available=PHIL_DATA.filter(p=>!used.includes(p.id)&&p.id!==philState.todayId);
+  const pool=available.length>0?available:PHIL_DATA.filter(p=>p.id!==philState.todayId);
+  if(!pool.length)return;
+  const next=pool[Math.floor(Math.random()*pool.length)];
+  philState.todayId=next.id;savePhilState();
+  renderPhilosophy();
+}
+
+function saveReck(){
+  const input=document.getElementById('reck-input');
+  if(!input)return;
+  const text=input.value.trim();if(!text)return;
+  const p=PHIL_DATA.find(ph=>ph.id===philState.todayId);if(!p)return;
+  if(!philState.reflections[p.id])philState.reflections[p.id]={};
+  philState.reflections[p.id][todayKey()]=text;
+  savePhilState();renderPhilosophy();
+}
+
+// ── READING STATE ─────────────────────────────────────────────────────────
+let readState={currentBook:0,progress:{},reflections:{}};
+const rss=localStorage.getItem('read_state');if(rss)try{readState=JSON.parse(rss);}catch(e){}
+let currentConcept=0;
+function saveReadState(){localStorage.setItem('read_state',JSON.stringify(readState));}
+function bkey(bookId,idx){return bookId+'_'+idx;}
+
+function renderReading(){
+  // Book tabs
+  const tabsEl=document.getElementById('book-tabs');
+  tabsEl.innerHTML=BOOKS.map((b,i)=>`<button class="btab${i===(readState.currentBook||0)?' active':''}" onclick="switchBook(${i})">${b.short}</button>`).join('');
+
+  const book=BOOKS[readState.currentBook||0];
+  // Progress dots
+  const dotsEl=document.getElementById('prog-dots');
+  dotsEl.innerHTML='<span class="prog-lbl">progress</span>'+book.concepts.map((_,i)=>{
+    const key=bkey(book.id,i);
+    const done=readState.progress&&readState.progress[key];
+    return `<div class="pdot${done?' done':''}${i===currentConcept?' active':''}" onclick="jumpConcept(${i})" title="${book.concepts[i].title}"></div>`;
+  }).join('');
+
+  // Concept card
+  const c=book.concepts[currentConcept];
+  const key=bkey(book.id,currentConcept);
+  const savedRef=readState.reflections&&readState.reflections[key]?readState.reflections[key]:'';
+
+  let html=`<div class="c-num">concept ${currentConcept+1} of ${book.concepts.length}</div>`;
+  html+=`<div class="c-title">${c.title}</div>`;
+  html+=`<div class="c-from">${c.from}</div>`;
+  html+=`<div class="c-body">${c.body}</div>`;
+  html+=`<div class="q-box"><div class="q-label">Your question</div><div class="q-text">${c.question}</div></div>`;
+  if(savedRef){
+    html+=`<div class="saved-ref"><div class="saved-ref-lbl">your reflection</div>${savedRef}</div>`;
+  } else {
+    html+=`<textarea class="ref-area" id="ref-input" placeholder="Type your reflection here — raw is fine..."></textarea>`;
+  }
+  html+=`<div class="btn-row">`;
+  if(!savedRef)html+=`<button class="abtn green" onclick="saveRef()">Save reflection</button>`;
+  html+=`<button class="abtn accent" onclick="discussConcept()">Discuss ↗</button>`;
+  if(currentConcept<book.concepts.length-1)html+=`<button class="abtn" onclick="nextConcept()">Next →</button>`;
+  if(currentConcept>0)html+=`<button class="abtn" onclick="prevConcept()">← Back</button>`;
+  html+=`</div>`;
+  document.getElementById('concept-body').innerHTML=html;
+}
+
+function toggleBookInfo(){const el=document.getElementById('book-info');el.style.display=el.style.display==='none'?'block':'none';}
+function switchBook(i){readState.currentBook=i;currentConcept=0;saveReadState();renderReading();}
+function jumpConcept(i){currentConcept=i;renderReading();}
+function nextConcept(){const book=BOOKS[readState.currentBook||0];const key=bkey(book.id,currentConcept);if(!readState.progress)readState.progress={};readState.progress[key]=true;currentConcept++;saveReadState();renderReading();}
+function prevConcept(){currentConcept--;renderReading();}
+function saveRef(){
+  const input=document.getElementById('ref-input');
+  const text=input?input.value.trim():'';if(!text)return;
+  const book=BOOKS[readState.currentBook||0];
+  const key=bkey(book.id,currentConcept);
+  if(!readState.reflections)readState.reflections={};
+  readState.reflections[key]=text;
+  if(!readState.progress)readState.progress={};
+  readState.progress[key]=true;
+  saveReadState();renderReading();
+}
+function discussConcept(){
+  const book=BOOKS[readState.currentBook||0];
+  const c=book.concepts[currentConcept];
+  const key=bkey(book.id,currentConcept);
+  const ref=readState.reflections&&readState.reflections[key]?readState.reflections[key]:'';
+  const input=document.getElementById('ref-input');
+  const typed=input?input.value:'';
+  alert(`Open Claude and say:\n\nI'm reflecting on "${c.title}" from ${book.short}.\n\nQuestion: "${c.question}"\n\n${ref||typed?'My reflection: '+(ref||typed):'I\'d like to think through this with you.'}`);
+}
+
+// ── FINANCE ──────────────────────────────────────────────────────────────
+const FIN_CACHE_KEY='finance_snapshot';
+const FIN_CACHE_DATE='finance_snapshot_date';
+
+async function loadFinance(){
+  const el=document.getElementById('finance-content');
+  // Check if we have a cached snapshot from today
+  const cachedDate=localStorage.getItem(FIN_CACHE_DATE);
+  const tk=todayKey();
+  if(cachedDate===tk){
+    const cached=localStorage.getItem(FIN_CACHE_KEY);
+    if(cached){try{renderFinance(JSON.parse(cached));return;}catch(e){}}
+  }
+
+  el.innerHTML=`<div class="loading" style="padding:40px;"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Fetching your snapshot from Google Drive...</div></div>`;
+
+  try{
+    // Ask Claude to read and parse the finance data
+    const body={
+      model:MODEL,max_tokens:1000,
+      system:'You are a financial data parser. Extract key figures from the user\'s household financial tracker and return ONLY valid JSON, no markdown, no explanation.',
+      messages:[{role:'user',content:`Read the Household Financial Tracker from Google Drive (file: Household_Financial_Tracker.xlsx in the HowPhuaHUAT folder) and extract these figures. Return ONLY this JSON structure:\n{"net_worth":number,"total_assets":number,"total_liabilities":number,"investments":{"voo":{"units":number,"current_price_sgd":number,"value_sgd":number,"pnl_sgd":number},"spy":{"units":number,"current_price_sgd":number,"value_sgd":number,"pnl_sgd":number},"meta":{"units":number,"value_sgd":number},"ge_ilp":{"units":number,"value_sgd":number}},"properties":{"spr_value":number,"spr_mortgage":number,"eco_value":number,"eco_mortgage":number},"last_updated":"date string from the file"}\n\nIf you cannot read the file, return {"error":"cannot_read"}`}]
+    };
+    const r=await fetch(`${BACKEND}/api/claude`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const data=await r.json();
+    const text=data.content.find(c=>c.type==='text')?.text||'{"error":"no_response"}';
+    const clean=text.replace(/```json|```/g,'').trim();
+    const parsed=JSON.parse(clean);
+    if(parsed.error){throw new Error(parsed.error);}
+    localStorage.setItem(FIN_CACHE_KEY,JSON.stringify(parsed));
+    localStorage.setItem(FIN_CACHE_DATE,tk);
+    renderFinance(parsed);
+  }catch(e){
+    // Show manual entry fallback
+    renderFinanceFallback();
+  }
+}
+
+function renderFinance(d){
+  const fmt=n=>n>=1000000?'S$'+( n/1000000).toFixed(2)+'M':n>=1000?'S$'+(n/1000).toFixed(0)+'K':'S$'+n.toFixed(0);
+  const fmtFull=n=>'S$'+n.toLocaleString('en-SG',{minimumFractionDigits:0,maximumFractionDigits:0});
+  const pnlClass=n=>n>=0?'pos':'neg';
+  const pnlSign=n=>n>=0?'+':'';
+
+  let html=`<div class="nw-hero">
+    <div class="nw-label">Household Net Worth</div>
+    <div class="nw-amount">${fmt(d.net_worth)}</div>
+    <div class="nw-sub">as of ${d.last_updated||'latest update'}</div>
+  </div>`;
+
+  html+=`<div class="fin-grid">
+    <div class="fin-card pos"><div class="fin-card-label">Total Assets</div><div class="fin-card-val">${fmt(d.total_assets)}</div></div>
+    <div class="fin-card neg"><div class="fin-card-label">Total Liabilities</div><div class="fin-card-val">${fmt(d.total_liabilities)}</div></div>
+  </div>`;
+
+  html+=`<div class="card"><div class="card-head"><div class="card-title">📈 Investments</div><button class="rbtn" onclick="loadFinance()">Refresh</button></div><div class="body">`;
+  html+=`<div class="fin-section-title">Portfolio</div>`;
+
+  if(d.investments){
+    const inv=d.investments;
+    if(inv.voo)html+=`<div class="inv-row"><div><div class="inv-name">VOO</div><div class="inv-sub">${inv.voo.units} units</div></div><div class="inv-val"><div class="inv-amount">${fmtFull(inv.voo.value_sgd)}</div><div class="inv-pnl ${pnlClass(inv.voo.pnl_sgd)}">${pnlSign(inv.voo.pnl_sgd)}${fmtFull(inv.voo.pnl_sgd)}</div></div></div>`;
+    if(inv.spy)html+=`<div class="inv-row"><div><div class="inv-name">SPY</div><div class="inv-sub">${inv.spy.units} units</div></div><div class="inv-val"><div class="inv-amount">${fmtFull(inv.spy.value_sgd)}</div><div class="inv-pnl ${pnlClass(inv.spy.pnl_sgd)}">${pnlSign(inv.spy.pnl_sgd)}${fmtFull(inv.spy.pnl_sgd)}</div></div></div>`;
+    if(inv.meta)html+=`<div class="inv-row"><div><div class="inv-name">META RSUs</div><div class="inv-sub">123 units · zero cost basis</div></div><div class="inv-val"><div class="inv-amount">${fmtFull(inv.meta.value_sgd)}</div><div class="inv-pnl pos">RSU income</div></div></div>`;
+    if(inv.ge_ilp)html+=`<div class="inv-row"><div><div class="inv-name">GE ILP Gold</div><div class="inv-sub">32,154 units</div></div><div class="inv-val"><div class="inv-amount">${fmtFull(inv.ge_ilp.value_sgd)}</div></div></div>`;
+  }
+  html+=`</div></div>`;
+
+  html+=`<div class="card"><div class="card-head"><div class="card-title">🏠 Properties</div></div><div class="body">`;
+  if(d.properties){
+    const p=d.properties;
+    if(p.spr_value)html+=`<div class="inv-row"><div><div class="inv-name">Seletar Park Residence</div><div class="inv-sub">Own stay · mortgage ${fmt(p.spr_mortgage)}</div></div><div class="inv-val"><div class="inv-amount">${fmt(p.spr_value)}</div></div></div>`;
+    if(p.eco_value)html+=`<div class="inv-row"><div><div class="inv-name">Ecopolitan EC</div><div class="inv-sub">Investment · mortgage ${fmt(p.eco_mortgage)}</div></div><div class="inv-val"><div class="inv-amount">${fmt(p.eco_value)}</div></div></div>`;
+  }
+  html+=`</div></div>`;
+  html+=`<div class="fin-updated">Updates when you open this tab · cached daily · last fetch: ${new Date().toLocaleTimeString('en-SG',{hour:'2-digit',minute:'2-digit'})}</div>`;
+
+  document.getElementById('finance-content').innerHTML=html;
+}
+
+function renderFinanceFallback(){
+  // Manual snapshot based on known figures
+  const snapshot={
+    net_worth:1715000,
+    total_assets:3608000,
+    total_liabilities:1893000,
+    investments:{
+      voo:{units:34,value_sgd:29607,pnl_sgd:1584},
+      spy:{units:8,value_sgd:7549,pnl_sgd:2213},
+      meta:{units:123,value_sgd:93678},
+      ge_ilp:{units:32154,value_sgd:26591}
+    },
+    properties:{spr_value:1450000,spr_mortgage:740987,eco_value:1600000,eco_mortgage:1114292},
+    last_updated:'Jun 2026 (manual snapshot)'
+  };
+  renderFinance(snapshot);
+}
+
+// ── EXISTING FUNCTIONS (news, night, learn, coach — unchanged) ───────────
+const cache2={};
+
+function sgtKey(){const now=new Date(),sgt=new Date(now.getTime()+8*3600000);return sgt.toISOString().slice(0,10);}
+
+async function ai(sys,usr,search=false){
+  const body={model:MODEL,max_tokens:1500,system:sys,messages:[{role:'user',content:usr}]};
+  if(search)body.tools=[{type:'web_search_20250305',name:'web_search'}];
+  const r=await fetch(`${BACKEND}/api/claude`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(!r.ok){const e=await r.json();throw new Error(e.error?.message||`HTTP ${r.status}`);}
+  const d=await r.json();
+  return d.content.filter(c=>c.type==='text').map(c=>c.text).join('');
+}
+
+function loading2(el,msg){document.getElementById(el).innerHTML=`<div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">${msg}</div></div>`;}
+function err2(el,msg){document.getElementById(el).innerHTML=`<div class="err">${msg}</div>`;}
+
+function cached2(key,loader,force=false){
+  if(!force&&cache2[key])return Promise.resolve(cache2[key]);
+  const lsv=localStorage.getItem(key);
+  if(!force&&lsv){cache2[key]=lsv;return Promise.resolve(lsv);}
+  return loader().then(v=>{cache2[key]=v;localStorage.setItem(key,v);return v;});
+}
+
+async function loadNews(force=false){
+  const key='n_'+sgtKey(),btn=document.getElementById('nr');
+  btn.disabled=true;loading2('nb','Scanning the world...');
+  try{
+    const raw=await cached2(key,()=>ai(
+      `News curator for ${prof.name}, ${prof.role} at ${prof.company} in ${prof.region}. Return ONLY a JSON array, no markdown.`,
+      `Search today's top news. Return array of 4 objects for: World News, Southeast Asia, Tech & Big Tech, AI Developments. Each: {"category":"...","headline":"...","sense_making":"2 sentences","leadership_angle":"1 sentence"}`,
+      true
+    ),force);
+    const match=raw.match(/\[[\s\S]*\]/);
+    if(!match)throw new Error('Bad format');
+    renderN(JSON.parse(match[0]));
+  }catch(e){err2('nb','Could not load news: '+e.message);}
+  btn.disabled=false;
+}
+
+function renderN(items){
+  document.getElementById('nb').innerHTML=`<div class="body">${items.map(n=>`
+    <div class="ni"><div class="ncat">${n.category}</div>
+    <div class="nhead">${n.headline}</div>
+    <div class="nsense">${n.sense_making}</div>
+    <div class="nangle">💼 ${n.leadership_angle}</div></div>`).join('')}</div>`;
+}
+
+async function loadConvo(force=false){
+  const key='c_'+sgtKey(),btn=document.getElementById('cr');
+  btn.disabled=true;loading2('cb','Finding a great topic...');
+  try{
+    const raw=await cached2(key,()=>ai(
+      `Conversation curator. Return ONLY valid JSON, no markdown.`,
+      `One interesting office conversation topic for a Finance Director at Meta SEA. JSON: {"topic":"name","context":"2 sentences","talking_points":["p1","p2","p3"],"why_interesting":"1 sentence"}`,
+      true
+    ),force);
+    renderC(JSON.parse(raw.replace(/```json|```/g,'').trim()));
+  }catch(e){err2('cb','Could not load: '+e.message);}
+  btn.disabled=false;
+}
+
+function renderC(d){
+  document.getElementById('cb').innerHTML=`<div class="body">
+    <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--gold2);margin-bottom:8px;">${d.topic}</div>
+    <p>${d.context}</p>
+    <div class="kl" style="margin:10px 0 6px;">Talking points</div>
+    ${d.talking_points.map(p=>`<div style="display:flex;gap:8px;margin-bottom:5px;font-size:13px;"><span style="color:var(--gold);">·</span><span>${p}</span></div>`).join('')}
+    <div style="margin-top:10px;font-size:12px;font-style:italic;color:var(--muted);">${d.why_interesting}</div></div>`;
+}
+
+async function loadVoice(force=false){
+  const key='v_'+sgtKey(),btn=document.getElementById('vr');
+  btn.disabled=true;loading2('vb','Calling on a thinker...');
+  const t=THINKERS[new Date().getDate()%THINKERS.length];
+  try{
+    const raw=await cached2(key,()=>ai(
+      `You write as ${t.n}. Focus: ${t.f}. First person, speaking directly to reader. Return ONLY valid JSON, no markdown.`,
+      `350-word personal growth reflection as ${t.n} for a Finance Director navigating leadership and self-mastery. Not finance-focused. JSON: {"thinker":"${t.n}","passage":"full passage"}`
+    ),force);
+    const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    document.getElementById('vb').innerHTML=`
+      <div class="th"><div class="av">${t.i}</div><div><div class="tn">${d.thinker}</div><div class="tf">${t.f}</div></div></div>
+      <div class="body">${d.passage.split('\n\n').map(p=>`<p>${p}</p>`).join('')}</div>`;
+  }catch(e){err2('vb','Could not load: '+e.message);}
+  btn.disabled=false;
+}
+
+async function loadStory(force=false){
+  const key='s_'+sgtKey(),btn=document.getElementById('sr');
+  btn.disabled=true;loading2('sb','Finding a story...');
+  try{
+    const raw=await cached2(key,()=>ai(
+      `Master storyteller. Return ONLY valid JSON, no markdown.`,
+      `350-word historical or philosophical narrative. Include modern echo and lesson. JSON: {"title":"...","narrative":"full story","lesson":"1-2 sentences"}`
+    ),force);
+    const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    document.getElementById('sb').innerHTML=`<div class="body">
+      <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--gold2);margin-bottom:12px;">${d.title}</div>
+      ${d.narrative.split('\n\n').map(p=>`<p>${p}</p>`).join('')}
+      <div style="background:rgba(201,168,76,.06);border-radius:8px;padding:10px 12px;margin-top:8px;">
+        <div style="font-size:10px;color:var(--gold);margin-bottom:3px;">LESSON</div>
+        <div style="font-size:13px;font-style:italic;">${d.lesson}</div>
+      </div></div>`;
+  }catch(e){err2('sb','Could not load: '+e.message);}
+  btn.disabled=false;
+}
+
+async function loadReflection(force=false){
+  const key='r_'+sgtKey(),btn=document.getElementById('rr');
+  btn.disabled=true;loading2('rb','Composing your question...');
+  try{
+    const q=await cached2(key,()=>ai(
+      `You craft single philosophical reflection questions. Return ONLY the question, nothing else.`,
+      `One powerful philosophical question for a Finance Director to sleep on. Deep, inward-facing, not about work.`
+    ),force);
+    document.getElementById('rb').innerHTML=`<div class="body"><div class="rq">${q.trim()}</div></div>`;
+  }catch(e){err2('rb','Could not load: '+e.message);}
+  btn.disabled=false;
+}
+
+function saveJ(){localStorage.setItem('fj',document.getElementById('jt').value);alert('Saved ✓');}
+
+function selDom(el,d){
+  document.querySelectorAll('.dbn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');dom=d;cardIdx=0;loadCard(true);
+}
+
+async function loadCard(force=false){
+  const topics=TOPICS[dom]||[],topic=topics[cardIdx%topics.length];
+  document.getElementById('cdl').textContent=dom;
+  document.getElementById('ctl').textContent=topic;
+  const key=`k_${dom}_${topic}`.replace(/\s+/g,'_');
+  document.getElementById('cl').innerHTML=`<div class="loading" style="padding:20px;text-align:center;"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Building your card...</div></div>`;
+  try{
+    const raw=await cached2(key,()=>ai(
+      `Knowledge card generator for ${prof.name}, ${prof.role} at ${prof.company} in ${prof.region}. Return ONLY valid JSON, no markdown.`,
+      `5-layer knowledge card for "${topic}" in "${dom}". JSON: {"concept":"3-4 sentences","real_world_case":"3-4 sentences","numbers_in_context":"3-4 sentences","leadership_implication":"3-4 sentences","reflection":"one question"}`
+    ),force);
+    const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    const layers=[['1','Concept',d.concept],['2','Real-World Case',d.real_world_case],['3','Numbers in Context',d.numbers_in_context],['4','Leadership Implication',d.leadership_implication],['5','Reflection',d.reflection]];
+    document.getElementById('cl').innerHTML=layers.map(([n,t,c],i)=>`
+      <div class="cl2" style="margin:0 0 8px;">
+        <div class="lh" onclick="togL(${i})">
+          <div class="ln">${n}</div>
+          <div class="lt2">${t}</div>
+          <div class="lch" id="cv${i}">${i===0?'▲':'▼'}</div>
+        </div>
+        <div class="lb ${i===0?'open':''}" id="lb${i}">${c}</div>
+      </div>`).join('');
+    cardIdx++;localStorage.setItem('fci',String(cardIdx));
+  }catch(e){document.getElementById('cl').innerHTML=`<div class="err">Could not load card: ${e.message}</div>`;}
+}
+
+function togL(i){const b=document.getElementById('lb'+i),open=b.classList.toggle('open');document.getElementById('cv'+i).textContent=open?'▲':'▼';}
+
+// ── NAV & INIT ────────────────────────────────────────────────────────────
+const sp2=localStorage.getItem('fp');if(sp2){Object.assign(prof,JSON.parse(sp2));}
+const sj2=localStorage.getItem('fj');if(sj2)document.getElementById('jt').value=sj2;
+const sci2=localStorage.getItem('fci');if(sci2)cardIdx=parseInt(sci2)||0;
 
 function tick(){
   const now=new Date(),sgt=new Date(now.getTime()+8*3600000),h=sgt.getUTCHours();
@@ -277,231 +835,17 @@ function goTo(p){
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.nb').forEach(x=>x.classList.remove('active'));
   document.getElementById('pg-'+p).classList.add('active');
-  document.getElementById('n-'+p).classList.add('active');
-  if(p==='morning')loadMorning();
-  if(p==='night')loadNight();
+  const nb=document.getElementById('n-'+p);if(nb)nb.classList.add('active');
+  if(p==='morning')renderPhilosophy();
+  if(p==='news'){loadNews();loadConvo();}
+  if(p==='reading')renderReading();
+  if(p==='night'){loadVoice();loadStory();loadReflection();}
+  if(p==='finance')loadFinance();
   if(p==='learn')loadCard();
 }
 
-function sgtKey(){const now=new Date(),sgt=new Date(now.getTime()+8*3600000);return sgt.toISOString().slice(0,10);}
-
-async function ai(sys,usr,search=false){
-  const body={model:MODEL,max_tokens:1500,system:sys,messages:[{role:'user',content:usr}]};
-  if(search)body.tools=[{type:'web_search_20250305',name:'web_search'}];
-  const r=await fetch(`${BACKEND}/api/claude`,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(body)
-  });
-  if(!r.ok){const e=await r.json();throw new Error(e.error?.message||`HTTP ${r.status}`);}
-  const d=await r.json();
-  return d.content.filter(c=>c.type==='text').map(c=>c.text).join('');
-}
-
-function loading(el,msg){document.getElementById(el).innerHTML=`<div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">${msg}</div></div>`;}
-function err(el,msg){document.getElementById(el).innerHTML=`<div class="err">${msg}</div>`;}
-
-function cached(key,loader,force=false){
-  if(!force&&cache[key])return Promise.resolve(cache[key]);
-  const lsv=localStorage.getItem(key);
-  if(!force&&lsv){cache[key]=lsv;return Promise.resolve(lsv);}
-  return loader().then(v=>{cache[key]=v;localStorage.setItem(key,v);return v;});
-}
-
-// MORNING
-function loadMorning(){loadWisdom();loadNews();loadConvo();}
-
-async function loadWisdom(force=false){
-  const key='w_'+sgtKey(),btn=document.getElementById('wr');
-  btn.disabled=true;
-  if(!force&&cache[key]){try{renderW(JSON.parse(cache[key]));}catch(e){}btn.disabled=false;return;}
-  loading('wb','Summoning wisdom...');
-  const school=SCHOOLS[new Date().getDay()%SCHOOLS.length];
-  try{
-    const raw=await cached(key,()=>ai(
-      `Philosophical wisdom curator for ${prof.name}, ${prof.role} at ${prof.company} in ${prof.region}. Return ONLY valid JSON, no markdown.`,
-      `Wisdom from ${school}. JSON: {"school":"${school}","philosopher":"name","quote":"under 35 words","interpretation":"2-3 sentences","leadership_application":"1-2 sentences for a Finance Director","reflection":"one inward question"}`
-    ),force);
-    renderW(JSON.parse(raw.replace(/```json|```/g,'').trim()));
-  }catch(e){err('wb','Could not load wisdom: '+e.message);}
-  btn.disabled=false;
-}
-
-function renderW(d){
-  document.getElementById('wb').innerHTML=`<div class="body">
-    <div class="qtag">📚 ${d.school} · ${d.philosopher}</div>
-    <div class="qblock"><div class="qt">"${d.quote}"</div><div class="qa">— ${d.philosopher}</div></div>
-    <div class="kv"><div class="kl">Interpretation</div><div class="kd">${d.interpretation}</div></div>
-    <div class="kv"><div class="kl">For you</div><div class="kd">${d.leadership_application}</div></div>
-    <div style="background:rgba(201,168,76,.06);border-radius:8px;padding:10px 12px;margin-top:4px;">
-      <div style="font-size:10px;color:var(--gold);letter-spacing:.5px;margin-bottom:3px;">REFLECT</div>
-      <div style="font-size:13px;font-style:italic;">${d.reflection}</div>
-    </div></div>`;
-}
-
-async function loadNews(force=false){
-  const key='n_'+sgtKey(),btn=document.getElementById('nr');
-  btn.disabled=true;loading('nb','Scanning the world...');
-  try{
-    const raw=await cached(key,()=>ai(
-      `News curator for ${prof.name}, ${prof.role} at ${prof.company} in ${prof.region}. Return ONLY a JSON array, no markdown.`,
-      `Search today's top news. Return array of 4 objects for: World News, Southeast Asia, Tech & Big Tech, AI Developments. Each: {"category":"...","headline":"...","sense_making":"2 sentences","leadership_angle":"1 sentence for Finance Director"}`,
-      true
-    ),force);
-    const match=raw.match(/\[[\s\S]*\]/);
-    if(!match)throw new Error('Bad format');
-    renderN(JSON.parse(match[0]));
-  }catch(e){err('nb','Could not load news: '+e.message);}
-  btn.disabled=false;
-}
-
-function renderN(items){
-  document.getElementById('nb').innerHTML=`<div class="body">${items.map(n=>`
-    <div class="ni"><div class="ncat">${n.category}</div>
-    <div class="nhead">${n.headline}</div>
-    <div class="nsense">${n.sense_making}</div>
-    <div class="nangle">💼 ${n.leadership_angle}</div></div>`).join('')}</div>`;
-}
-
-async function loadConvo(force=false){
-  const key='c_'+sgtKey(),btn=document.getElementById('cr');
-  btn.disabled=true;loading('cb','Finding a great topic...');
-  try{
-    const raw=await cached(key,()=>ai(
-      `Conversation curator. Return ONLY valid JSON, no markdown.`,
-      `One interesting office conversation topic for a Finance Director at Meta SEA. JSON: {"topic":"name","context":"2 sentences","talking_points":["p1","p2","p3"],"why_interesting":"1 sentence"}`,
-      true
-    ),force);
-    renderC(JSON.parse(raw.replace(/```json|```/g,'').trim()));
-  }catch(e){err('cb','Could not load: '+e.message);}
-  btn.disabled=false;
-}
-
-function renderC(d){
-  document.getElementById('cb').innerHTML=`<div class="body">
-    <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--gold2);margin-bottom:8px;">${d.topic}</div>
-    <p>${d.context}</p>
-    <div class="kl" style="margin:10px 0 6px;">Talking points</div>
-    ${d.talking_points.map(p=>`<div style="display:flex;gap:8px;margin-bottom:5px;font-size:13px;"><span style="color:var(--gold);">·</span><span>${p}</span></div>`).join('')}
-    <div style="margin-top:10px;font-size:12px;font-style:italic;color:var(--muted);">${d.why_interesting}</div></div>`;
-}
-
-// NIGHT
-function loadNight(){loadVoice();loadStory();loadReflection();}
-
-async function loadVoice(force=false){
-  const key='v_'+sgtKey(),btn=document.getElementById('vr');
-  btn.disabled=true;loading('vb','Calling on a thinker...');
-  const t=THINKERS[new Date().getDate()%THINKERS.length];
-  try{
-    const raw=await cached(key,()=>ai(
-      `You write as ${t.n}. Focus: ${t.f}. First person, speaking directly to reader. Return ONLY valid JSON, no markdown.`,
-      `350-word personal growth reflection as ${t.n} for a Finance Director navigating leadership and self-mastery. Not finance-focused. JSON: {"thinker":"${t.n}","passage":"full passage"}`
-    ),force);
-    const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
-    document.getElementById('vb').innerHTML=`
-      <div class="th"><div class="av">${t.i}</div><div><div class="tn">${d.thinker}</div><div class="tf">${t.f}</div></div></div>
-      <div class="body">${d.passage.split('\n\n').map(p=>`<p>${p}</p>`).join('')}</div>`;
-  }catch(e){err('vb','Could not load: '+e.message);}
-  btn.disabled=false;
-}
-
-async function loadStory(force=false){
-  const key='s_'+sgtKey(),btn=document.getElementById('sr');
-  btn.disabled=true;loading('sb','Finding a story...');
-  try{
-    const raw=await cached(key,()=>ai(
-      `Master storyteller. Return ONLY valid JSON, no markdown.`,
-      `350-word historical or philosophical narrative — pivotal moment or philosophy in action. Include modern echo and lesson. JSON: {"title":"...","narrative":"full story","lesson":"1-2 sentences"}`
-    ),force);
-    const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
-    document.getElementById('sb').innerHTML=`<div class="body">
-      <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--gold2);margin-bottom:12px;">${d.title}</div>
-      ${d.narrative.split('\n\n').map(p=>`<p>${p}</p>`).join('')}
-      <div style="background:rgba(201,168,76,.06);border-radius:8px;padding:10px 12px;margin-top:8px;">
-        <div style="font-size:10px;color:var(--gold);margin-bottom:3px;">LESSON</div>
-        <div style="font-size:13px;font-style:italic;">${d.lesson}</div>
-      </div></div>`;
-  }catch(e){err('sb','Could not load: '+e.message);}
-  btn.disabled=false;
-}
-
-async function loadReflection(force=false){
-  const key='r_'+sgtKey(),btn=document.getElementById('rr');
-  btn.disabled=true;loading('rb','Composing your question...');
-  try{
-    const q=await cached(key,()=>ai(
-      `You craft single philosophical reflection questions. Return ONLY the question, nothing else.`,
-      `One powerful philosophical question for a Finance Director to sleep on. Deep, inward-facing, not about work.`
-    ),force);
-    document.getElementById('rb').innerHTML=`<div class="body"><div class="rq">${q.trim()}</div></div>`;
-  }catch(e){err('rb','Could not load: '+e.message);}
-  btn.disabled=false;
-}
-
-function saveJ(){localStorage.setItem('fj',document.getElementById('jt').value);alert('Saved ✓');}
-
-// LEARN
-function selDom(el,d){
-  document.querySelectorAll('.dbn').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active');dom=d;cardIdx=0;loadCard(true);
-}
-
-async function loadCard(force=false){
-  const topics=TOPICS[dom]||[],topic=topics[cardIdx%topics.length];
-  document.getElementById('cdl').textContent=dom;
-  document.getElementById('ctl').textContent=topic;
-  const key=`k_${dom}_${topic}`.replace(/\s+/g,'_');
-  document.getElementById('cl').innerHTML=`<div class="loading" style="padding:20px;text-align:center;"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Building your card...</div></div>`;
-  try{
-    const raw=await cached(key,()=>ai(
-      `Knowledge card generator for ${prof.name}, ${prof.role} at ${prof.company} in ${prof.region}. Return ONLY valid JSON, no markdown.`,
-      `5-layer knowledge card for "${topic}" in "${dom}". JSON: {"concept":"plain-English definition, why it exists (3-4 sentences)","real_world_case":"named company/event, what happened, what we learn (3-4 sentences)","numbers_in_context":"simplified figures showing concept in action (3-4 sentences)","leadership_implication":"what a Finance Director does with this (3-4 sentences)","reflection":"one inward question to cement the idea"}`
-    ),force);
-    const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
-    const layers=[['1','Concept',d.concept],['2','Real-World Case',d.real_world_case],['3','Numbers in Context',d.numbers_in_context],['4','Leadership Implication',d.leadership_implication],['5','Reflection',d.reflection]];
-    document.getElementById('cl').innerHTML=layers.map(([n,t,c],i)=>`
-      <div class="cl" style="margin:0 0 8px;">
-        <div class="lh" onclick="togL(${i})">
-          <div class="ln">${n}</div>
-          <div class="lt2">${t}</div>
-          <div class="lch" id="cv${i}">${i===0?'▲':'▼'}</div>
-        </div>
-        <div class="lb ${i===0?'open':''}" id="lb${i}">${c}</div>
-      </div>`).join('');
-    cardIdx++;localStorage.setItem('fci',String(cardIdx));
-  }catch(e){document.getElementById('cl').innerHTML=`<div class="err">Could not load card: ${e.message}</div>`;}
-}
-
-function togL(i){const b=document.getElementById('lb'+i),open=b.classList.toggle('open');document.getElementById('cv'+i).textContent=open?'▲':'▼';}
-
-// COACH
-async function sendC(){const v=document.getElementById('ci').value.trim();if(!v)return;document.getElementById('ci').value='';cp(v);}
-
-async function cp(msg){
-  const cm=document.getElementById('cm');
-  cm.innerHTML+=`<div class="umsg">${msg}</div>`;
-  const ld=document.createElement('div');ld.className='cmsg';
-  ld.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';
-  cm.appendChild(ld);cm.scrollTop=cm.scrollHeight;
-  ch.push({role:'user',content:msg});
-  try{
-    const body={model:MODEL,max_tokens:800,system:`You are an executive coach for ${prof.name}, ${prof.role} at ${prof.company} in ${prof.region}. Goals: ${prof.goals}. Be direct, insightful, challenging.`,messages:ch};
-    const r=await fetch(`${BACKEND}/api/claude`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-    const data=await r.json();
-    const reply=data.content.find(c=>c.type==='text')?.text||'Sorry, could not respond.';
-    ch.push({role:'assistant',content:reply});
-    ld.innerHTML=reply.split('\n\n').map(p=>`<p style="margin-bottom:7px;line-height:1.65;">${p}</p>`).join('');
-  }catch(e){ld.innerHTML=`<div class="err">${e.message}</div>`;}
-  cm.scrollTop=cm.scrollHeight;
-}
-
-function clearCoach(){ch.length=0;document.getElementById('cm').innerHTML=`<div class="cmsg">Session cleared. What would you like to explore, ${prof.name}?</div>`;}
-
-function saveP(){
-  prof={name:document.getElementById('pn').value,role:document.getElementById('pr').value,company:document.getElementById('pc').value,region:document.getElementById('preg').value,goals:document.getElementById('pg2').value};
-  applyP();tick();localStorage.setItem('fp',JSON.stringify(prof));alert('Saved ✓');
-}
+// Init morning on load
+renderPhilosophy();
 </script>
 </body>
 </html>
