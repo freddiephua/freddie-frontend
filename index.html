@@ -759,11 +759,11 @@ async function loadVoice(force=false){
   btn.disabled=true;loading2('vb','Calling on a thinker...');
   const t=getNightThinker();
   const mc=getMorningContext();
-  const morningHint=mc?` This person carried a question today rooted in ${mc.tradition}: "${mc.question||'how to live well'}". Speak to where they are tonight, not generically.`:'';
+  const morningHint=mc?' This person carried a question today rooted in '+mc.tradition+': "'+( mc.question||'how to live well')+'". Speak to where they are tonight, not generically.':'';
   try{
     const raw=await cached2(key,()=>ai(
-      `You write as ${t.n}. Focus: ${t.f}. First person, speaking directly to Freddie. Tone: intimate, wise, end-of-day. Return ONLY valid JSON, no markdown.`,
-      `350-word personal growth reflection as ${t.n} for Freddie — someone who thinks from first principles, practices the pause between stimulus and response, and is building a life of character not just achievement.${morningHint} Not finance-focused. JSON: {"thinker":"${t.n}","passage":"full passage"}`
+      'You write as '+t.n+'. Focus: '+t.f+'. First person, speaking directly to Freddie. Tone: intimate, wise, end-of-day. Return ONLY valid JSON, no markdown.',
+      '350-word personal growth reflection as '+t.n+' for Freddie — someone who thinks from first principles, practices the pause between stimulus and response, and is building a life of character not just achievement.'+morningHint+' Not finance-focused. JSON: {"thinker":"'+t.n+'","passage":"full passage"}'
     ),force);
     const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
     document.getElementById('vb').innerHTML=`
@@ -778,16 +778,16 @@ async function loadStory(force=false){
   btn.disabled=true;loading2('sb','Finding a story...');
   const t=getNightThinker();
   const mc=getMorningContext();
-  const themeHint=mc?` The story should resonate with someone who spent today reflecting on: "${mc.question||'how to live with intention'}".`:'';
+  const themeHint=mc?' The story should resonate with someone who spent today reflecting on: "'+( mc.question||'how to live with intention')+'".':"";
   try{
     const raw=await cached2(key,()=>ai(
-      `Master storyteller. Return ONLY valid JSON, no markdown.`,
-      `A 350-word historical or philosophical story drawn from the world of ${t.n} — their era, their tradition, a figure they admired, or a moment that shaped the philosophy of ${t.f}.${themeHint} The story should feel like a natural companion to hearing ${t.n} speak. Include a brief modern echo and one-line lesson. JSON: {"title":"...","narrative":"full story","lesson":"1-2 sentences","thinker_connection":"one sentence explaining why ${t.n} would tell this story"}`
+      'Master storyteller. Return ONLY valid JSON, no markdown.',
+      'A 350-word historical or philosophical story drawn from the world of '+t.n+' — their era, their tradition, a figure they admired, or a moment that shaped the philosophy of '+t.f+'.'+themeHint+' The story should feel like a natural companion to hearing '+t.n+' speak. Include a brief modern echo and one-line lesson. JSON: {"title":"...","narrative":"full story","lesson":"1-2 sentences","thinker_connection":"one sentence explaining why '+t.n+' would tell this story"}'
     ),force);
     const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
     document.getElementById('sb').innerHTML=`<div class="body">
       <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--gold2);margin-bottom:6px;">${d.title}</div>
-      <div style="font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px;">A story from the world of ${t.n}</div>
+      <div style="font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px;">A story from the world of '+t.n+'</div>
       ${d.narrative.split('\n\n').map(p=>`<p>${p}</p>`).join('')}
       <div style="background:rgba(201,168,76,.06);border-radius:8px;padding:10px 12px;margin-top:8px;">
         <div style="font-size:10px;color:var(--gold);margin-bottom:3px;">LESSON</div>
@@ -803,23 +803,20 @@ async function loadReflection(force=false){
   const t=getNightThinker();
   const mc=getMorningContext();
   // Build day arc context
-  let dayArc=`Tonight's thinker is ${t.n} (${t.f}).`;
+  let dayArc='Tonight's thinker is '+t.n+' ('+t.f+').';
   if(mc){
-    dayArc+=` This morning Freddie carried a question rooted in ${mc.tradition}: "${mc.question||''}"`;
-    if(mc.reckoning) dayArc+=` His evening reckoning was: "${mc.reckoning}"`;
-    dayArc+=` The closing question should complete the arc of this day — connecting the morning intention to the night reflection, through the lens of ${t.n}.`;
+    dayArc+=' This morning Freddie carried a question rooted in '+mc.tradition+': "'+(mc.question||'')+'"';
+    if(mc.reckoning) dayArc+=' His evening reckoning was: "'+mc.reckoning+'"';
+    dayArc+=' The closing question should complete the arc of this day — connecting the morning intention to the night reflection, through the lens of '+t.n+'.';
   } else {
-    dayArc+=` Ask a question ${t.n} would pose — inward-facing, not about work, something to sit with while falling asleep.`;
+    dayArc+=' Ask a question '+t.n+' would pose — inward-facing, not about work, something to sit with while falling asleep.';
   }
   try{
     const q=await cached2(key,()=>ai(
-      `You craft single philosophical questions for end-of-day reflection. Return ONLY the question itself, no preamble, no quotation marks, nothing else.`,
+      'You craft single philosophical questions for end-of-day reflection. Return ONLY the question itself, no preamble, no quotation marks, nothing else.',
       dayArc
     ),force);
-    document.getElementById('rb').innerHTML=`<div class="body">
-      <div style="font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;text-align:center;">from the mind of ${t.n}</div>
-      <div class="rq">${q.trim()}</div>
-    </div>`;
+    document.getElementById('rb').innerHTML='<div class="body"><div style="font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;text-align:center;">from the mind of '+t.n+'</div><div class="rq">'+q.trim()+'</div></div>';
   }catch(e){err2('rb','Could not load: '+e.message);}
   btn.disabled=false;
 }
