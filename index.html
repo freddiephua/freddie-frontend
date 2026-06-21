@@ -182,7 +182,7 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
   <div class="slabel">Modules</div>
   <div class="hmgrid">
     <div class="hmc" onclick="goTo('morning')"><div class="hmi">🌅</div><div class="hmn">Morning</div><div class="hmd">Philosophy · Intention</div></div>
-    <div class="hmc" onclick="goTo('news')"><div class="hmi">📰</div><div class="hmn">News</div><div class="hmd">Digest · Conversation</div></div>
+    <div class="hmc" onclick="goTo('news')"><div class="hmi">📰</div><div class="hmn">News</div><div class="hmd">World · SEA · Tech · AI</div></div>
     <div class="hmc" onclick="goTo('reading')"><div class="hmi">📚</div><div class="hmn">Reading</div><div class="hmd">Books · Concepts · Reflect</div></div>
     <div class="hmc" onclick="goTo('night')"><div class="hmi">🌙</div><div class="hmn">Night</div><div class="hmd">Thinker · Story · Journal</div></div>
     <div class="hmc" onclick="goTo('finance')"><div class="hmi">💰</div><div class="hmn">Finance</div><div class="hmd">Net worth · Investments</div></div>
@@ -215,15 +215,11 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
 
 <!-- NEWS -->
 <div class="page" id="pg-news">
-  <div class="slabel">News & Conversation</div>
+  <div class="slabel">News Digest</div>
   <div style="padding:0 16px 12px;font-size:12px;color:var(--muted);line-height:1.6;">Best read post-gym, pre-work — when your mind is sharp and ready to act on information.</div>
   <div class="card">
     <div class="card-head"><div class="card-title">📰 News Digest</div><button class="rbtn" id="nr" onclick="loadNews(true)">Refresh</button></div>
     <div id="nb"><div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Scanning the world...</div></div></div>
-  </div>
-  <div class="card">
-    <div class="card-head"><div class="card-title">💡 Conversation Starter</div><button class="rbtn" id="cr" onclick="loadConvo(true)">Refresh</button></div>
-    <div id="cb"><div class="loading"><div class="dots"><span></span><span></span><span></span></div><div class="lt">Finding a great topic...</div></div></div>
   </div>
 </div>
 
@@ -244,7 +240,7 @@ body{background:var(--navy);color:var(--text);font-family:'DM Sans',sans-serif;m
       6. Click index.html → pencil icon → select all → paste → commit<br>
       7. Vercel redeploys in ~30 seconds
     </div>
-    <div style="font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;">Current books: Tibetan (Beginners) · Tibetan (Sogyal) · Psychology of Money · Dalio Principles</div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;">Current books: Tibetan (Beginners) · Tibetan (Sogyal) · Psychology of Money · Dalio Principles · Atomic Habits</div>
   </div>
   <div class="book-scroll" id="book-tabs"></div>
   <div class="prog-row" id="prog-dots"></div>
@@ -371,6 +367,13 @@ const BOOKS=[
     {title:'The 5-step process',from:'Part 2 — My most fundamental life principles',body:'Have clear goals, identify the problems blocking you, diagnose the root cause, design a plan, execute. What makes it powerful is the diagnosis step — most people skip from problem to solution. The root cause of most problems is either a design failure or a personnel failure.',question:'Take one current problem and force yourself through the diagnosis step. Is the problem a design failure, a personnel failure (including your own behaviour), or both?'},
     {title:'Believability-weighted decisions',from:'Part 3 — Management principles',body:'Not all opinions are equally valuable. Weight input by the demonstrated competence of the person giving it in the relevant domain — including yourself. This requires the humility to sometimes discount your own view when someone with a stronger track record disagrees.',question:'In a current important decision, whose input are you weighting most heavily — and is that weighting based on their demonstrated competence, or on other factors like relationship or agreement?'},
   ]},
+  {id:'atomic_habits',short:'Atomic Habits',concepts:[
+    {title:'Identity before outcomes',from:'Ch.2 — How Your Habits Shape Your Identity',body:'Most people set goals and then try to build habits to reach them. Clear inverts this. The most effective way to change your behavior is to focus not on what you want to achieve but on who you wish to become. You went to the gym 4 times a week and brought your body fat from 21% to 10% and held it there. That didn't happen because you had a goal. It happened because you became someone for whom the gym is structural. You voted for that identity with every session.',question:'What identity are you currently building through your daily habits — not the one you intend to build, but the one your actual behavior is casting votes for? Are those votes consistent with who you want to become?'},
+    {title:'Habit stacking — design your sequence',from:'Ch.5 — The Best Way to Start a New Habit',body:'Your morning routine is already a habit stack: wake → coffee → philosophy → dog walk → gym → work. You built this architecture without naming it. Habit stacking is the deliberate version: "After [current habit], I will [new habit]." The power is that you're not relying on motivation or memory — you're using an existing behavior as the cue. The bardo pause is also a habit. The question is what you stack on top of the first instinct.',question:'Is there a behavior you keep meaning to build that you haven't managed to start? What existing habit in your daily sequence could you stack it on top of — and at what precise moment?'},
+    {title:'Systems beat goals — 1% compounds',from:'Ch.1 — The Surprising Power of Atomic Habits',body:'Goals are about the results you want to achieve. Systems are about the processes that lead to those results. British Cycling didn't set a goal to win the Tour de France. They built a system of 1% improvements across every variable. Your VOO DCA is the financial version of this. You don't buy when conditions are perfect. You buy consistently, mechanically, without drama. The system removes the decision. The compounding does the work.',question:'Where in your life are you still operating from goal-thinking rather than system-thinking? What would it look like to replace the goal with a process you can execute regardless of motivation?'},
+    {title:'Make it obvious — design your environment',from:'Ch.4 — The Man Who Didn't Look Right',body:'We think behavior is driven by motivation. It is mostly driven by environment. The cues that trigger habits become invisible over time — the phone on the desk, the snack on the counter, the open tab. Clear's point is that you can redesign your environment to make good habits obvious and bad habits invisible. The bardo pause isn't just a mental practice — it can be an environmental one. What cues in your environment are currently triggering reactive responses before you even notice?',question:'Pick one habit you want to build or one reactive pattern you want to interrupt. What change to your physical environment — not your mindset — would make the good behavior more obvious or the reactive behavior less automatic?'},
+    {title:'Never miss twice — the real rule of compounding',from:'Ch.16 — How to Stick with Good Habits Every Day',body:'Missing once is an accident. Missing twice is the start of a new habit. The danger isn't the bad day — it's the spiral after the bad day. This is exactly what Stoic philosophy says about the morning reckoning: not to punish yourself for falling short, but to see clearly and return. Clear's version is mechanical: you are allowed one miss. Never two in a row. This single rule protects your systems from the entropy that follows every setback.',question:'Where in your life do you tend to spiral after a miss — where one lapse becomes two, then a week off? What would it look like to treat "never miss twice" as a non-negotiable rule rather than a aspiration?'},
+  ]}
 ];
 
 // ── THINKERS & TOPICS (unchanged) ──────────────────────────────────────
@@ -731,14 +734,36 @@ function renderC(d){
     <div style="margin-top:10px;font-size:12px;font-style:italic;color:var(--muted);">${d.why_interesting}</div></div>`;
 }
 
+// Get today's thinker — shared across all night functions
+function getNightThinker(){return THINKERS[new Date().getDate()%THINKERS.length];}
+
+// Get morning philosophy context for day arc
+function getMorningContext(){
+  try{
+    const ps=localStorage.getItem('phil_state');
+    if(!ps)return null;
+    const state=JSON.parse(ps);
+    if(!state.todayId)return null;
+    const PHIL_IDS_TO_TRADITION={'p1':'Stoicism','p2':'Buddhist thought','p3':'Dalio — Principles','p4':'Stoicism','p5':'Psychology of Money','p6':'Buddhist thought','p7':'Dalio — Principles','p8':'Stoicism','p9':'Psychology of Money','p10':'Buddhist thought','p11':'Stoicism','p12':'Dalio — Principles'};
+    const PHIL_IDS_TO_QUESTION={'p1':'What are you currently working around rather than through?','p2':'Can you name the first instinct before you act on it?','p3':'What difficult experience have you not yet mined for its lesson?','p4':'Where are you spending energy on something you cannot control?','p5':'What risk in your financial life could force you to start over?','p6':'What are you currently practicing that you would not consciously choose?','p7':'Who gives you feedback you tend to discount?','p8':'What would you stop giving energy to if you held your mortality in mind?','p9':'What would cause you to deviate from your investment plan?','p10':'Before correcting someone today — what was your actual intention?','p11':'Where did you fall short of your own standard today?','p12':'What recurring situation reveals a missing principle?'};
+    return {
+      tradition: PHIL_IDS_TO_TRADITION[state.todayId]||'philosophy',
+      question: PHIL_IDS_TO_QUESTION[state.todayId]||null,
+      reckoning: state.reflections[state.todayId]?state.reflections[state.todayId][todayKey()]||null:null
+    };
+  }catch(e){return null;}
+}
+
 async function loadVoice(force=false){
   const key='v_'+sgtKey(),btn=document.getElementById('vr');
   btn.disabled=true;loading2('vb','Calling on a thinker...');
-  const t=THINKERS[new Date().getDate()%THINKERS.length];
+  const t=getNightThinker();
+  const mc=getMorningContext();
+  const morningHint=mc?` This person carried a question today rooted in ${mc.tradition}: "${mc.question||'how to live well'}". Speak to where they are tonight, not generically.`:'';
   try{
     const raw=await cached2(key,()=>ai(
-      `You write as ${t.n}. Focus: ${t.f}. First person, speaking directly to reader. Return ONLY valid JSON, no markdown.`,
-      `350-word personal growth reflection as ${t.n} for a Finance Director navigating leadership and self-mastery. Not finance-focused. JSON: {"thinker":"${t.n}","passage":"full passage"}`
+      `You write as ${t.n}. Focus: ${t.f}. First person, speaking directly to Freddie. Tone: intimate, wise, end-of-day. Return ONLY valid JSON, no markdown.`,
+      `350-word personal growth reflection as ${t.n} for Freddie — someone who thinks from first principles, practices the pause between stimulus and response, and is building a life of character not just achievement.${morningHint} Not finance-focused. JSON: {"thinker":"${t.n}","passage":"full passage"}`
     ),force);
     const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
     document.getElementById('vb').innerHTML=`
@@ -751,14 +776,18 @@ async function loadVoice(force=false){
 async function loadStory(force=false){
   const key='s_'+sgtKey(),btn=document.getElementById('sr');
   btn.disabled=true;loading2('sb','Finding a story...');
+  const t=getNightThinker();
+  const mc=getMorningContext();
+  const themeHint=mc?` The story should resonate with someone who spent today reflecting on: "${mc.question||'how to live with intention'}".`:'';
   try{
     const raw=await cached2(key,()=>ai(
       `Master storyteller. Return ONLY valid JSON, no markdown.`,
-      `350-word historical or philosophical narrative. Include modern echo and lesson. JSON: {"title":"...","narrative":"full story","lesson":"1-2 sentences"}`
+      `A 350-word historical or philosophical story drawn from the world of ${t.n} — their era, their tradition, a figure they admired, or a moment that shaped the philosophy of ${t.f}.${themeHint} The story should feel like a natural companion to hearing ${t.n} speak. Include a brief modern echo and one-line lesson. JSON: {"title":"...","narrative":"full story","lesson":"1-2 sentences","thinker_connection":"one sentence explaining why ${t.n} would tell this story"}`
     ),force);
     const d=JSON.parse(raw.replace(/```json|```/g,'').trim());
     document.getElementById('sb').innerHTML=`<div class="body">
-      <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--gold2);margin-bottom:12px;">${d.title}</div>
+      <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--gold2);margin-bottom:6px;">${d.title}</div>
+      <div style="font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px;">A story from the world of ${t.n}</div>
       ${d.narrative.split('\n\n').map(p=>`<p>${p}</p>`).join('')}
       <div style="background:rgba(201,168,76,.06);border-radius:8px;padding:10px 12px;margin-top:8px;">
         <div style="font-size:10px;color:var(--gold);margin-bottom:3px;">LESSON</div>
@@ -771,12 +800,26 @@ async function loadStory(force=false){
 async function loadReflection(force=false){
   const key='r_'+sgtKey(),btn=document.getElementById('rr');
   btn.disabled=true;loading2('rb','Composing your question...');
+  const t=getNightThinker();
+  const mc=getMorningContext();
+  // Build day arc context
+  let dayArc=`Tonight's thinker is ${t.n} (${t.f}).`;
+  if(mc){
+    dayArc+=` This morning Freddie carried a question rooted in ${mc.tradition}: "${mc.question||''}"`;
+    if(mc.reckoning) dayArc+=` His evening reckoning was: "${mc.reckoning}"`;
+    dayArc+=` The closing question should complete the arc of this day — connecting the morning intention to the night reflection, through the lens of ${t.n}.`;
+  } else {
+    dayArc+=` Ask a question ${t.n} would pose — inward-facing, not about work, something to sit with while falling asleep.`;
+  }
   try{
     const q=await cached2(key,()=>ai(
-      `You craft single philosophical reflection questions. Return ONLY the question, nothing else.`,
-      `One powerful philosophical question for a Finance Director to sleep on. Deep, inward-facing, not about work.`
+      `You craft single philosophical questions for end-of-day reflection. Return ONLY the question itself, no preamble, no quotation marks, nothing else.`,
+      dayArc
     ),force);
-    document.getElementById('rb').innerHTML=`<div class="body"><div class="rq">${q.trim()}</div></div>`;
+    document.getElementById('rb').innerHTML=`<div class="body">
+      <div style="font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;text-align:center;">from the mind of ${t.n}</div>
+      <div class="rq">${q.trim()}</div>
+    </div>`;
   }catch(e){err2('rb','Could not load: '+e.message);}
   btn.disabled=false;
 }
@@ -837,7 +880,7 @@ function goTo(p){
   document.getElementById('pg-'+p).classList.add('active');
   const nb=document.getElementById('n-'+p);if(nb)nb.classList.add('active');
   if(p==='morning')renderPhilosophy();
-  if(p==='news'){loadNews();loadConvo();}
+  if(p==='news'){loadNews();}
   if(p==='reading')renderReading();
   if(p==='night'){loadVoice();loadStory();loadReflection();}
   if(p==='finance')loadFinance();
